@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>pdf viewer with drag and drop</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <link rel=“stylesheet” type=“text/css” href=“assets/css/index.css” />
+
+</head>
+
+<body>
+
+  <div style="display: flex;" id='selectorContainer'>
+    <div class="col-fixed-240" id='parametriContainer'>
+      <img class='drag-drop' src='assets/img/ponii.jpg' width="150px" height="75px">
+    </div>
+    <div class="dropzone">
+      <canvas id="the-canvas"></canvas>
+    </div>
+    <div>
+      <button onclick="showCoordinates()">display position</button>
+    </div>
+  </div>
+  <div>
+    <button id='btn-prev'>Previous</button>
+      <span id='page-counter'></span>
+    <button id='btn-next'>Next</button>
+  </div>
+</body>
+
+<script src='assets/js/index.js'></script>
+</html>
